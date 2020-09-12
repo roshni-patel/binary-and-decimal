@@ -33,3 +33,28 @@ describe "binary to decimal" do
     expect(binary_to_decimal(binary_array)).must_equal expected_decimal
   end
 end
+
+
+# Tests for optional decimal to binary 
+describe "decimal to binary" do
+  it "From 397 to 110001101" do
+    decimal = 397
+    expected_binary = [1, 1, 0, 0, 0, 1, 1, 0, 1]
+
+    expect(decimal_to_binary(decimal)).must_equal expected_binary
+  end
+
+  it "From 770 to 1100000010" do
+    decimal = 770
+    expected_binary = [1, 1, 0, 0, 0, 0, 0, 0, 1, 0]
+
+    expect(decimal_to_binary(decimal)).must_equal expected_binary
+  end
+
+  it "From 287 to 100011111" do
+    decimal = 287
+    expected_binary = [1, 0, 0, 0, 1, 1, 1, 1, 1]
+
+    expect(decimal_to_binary(decimal)).must_equal expected_binary
+  end
+ end
